@@ -11,5 +11,6 @@ deploy:
   bucket: hgogonis.me
   local-dir: public
   acl: public_read
+  region: us-west-2
   on:
     repo: HarryGogonis/portfolio

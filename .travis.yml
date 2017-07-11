@@ -1,31 +1,21 @@
-# back to language cpp to try to bypass osx node failure
 language: cpp
 sudo: false
 env:
-  - export NODE_VERSION="0.10"
-  - export NODE_VERSION="0.12"
-  - export NODE_VERSION="4"
-  - export NODE_VERSION="5"
+- export NODE_VERSION="8"
 os:
-  - linux
-  - osx
-# pre-install to bring in the correct version of node via nvm
+- linux
+- osx
 before_install:
-  - git submodule update --init --recursive
-  - git clone https://github.com/creationix/nvm.git ./.nvm
-  - source ./.nvm/nvm.sh
-  - nvm install $NODE_VERSION
-  - nvm use $NODE_VERSION
-  - npm config set python `which python`
-  - if [ $TRAVIS_OS_NAME == "linux" ]; then
-      export CC="gcc-4.8";
-      export CXX="g++-4.8";
-      export LINK="gcc-4.8";
-      export LINKXX="g++-4.8";
-    fi
-  - gcc --version
-  - g++ --version
-# node 4 depends on gcc 4.8
+- git submodule update --init --recursive
+- git clone https://github.com/creationix/nvm.git ./.nvm
+- source ./.nvm/nvm.sh
+- nvm install $NODE_VERSION
+- nvm use $NODE_VERSION
+- npm config set python `which python`
+- if [ $TRAVIS_OS_NAME == "linux" ]; then export CC="gcc-4.8"; export CXX="g++-4.8";
+  export LINK="gcc-4.8"; export LINKXX="g++-4.8"; fi
+- gcc --version
+- g++ --version
 addons:
   apt:
     sources:
@@ -33,7 +23,16 @@ addons:
     packages:
     - g++-4.8
     - gcc-4.8
-# script needed to test, because defaults don't work on osx
 script:
-  - npm install
-  - npm run lint
+- npm install
+- npm run lint
+deploy:
+  provider: s3
+  access_key_id: AKIAJJOF6XQCERTEBKWA
+  secret_access_key:
+    secure: bLiK0BMS9zjmtHDI/9OHWqvkSF/hWBdTcT0ManVji+4HOkj+zqhu37b07cAoFkRebLJgcHiXlqMD5O3W/bK92JgLlLgHj4wLvk42z2MgUFbBeZWVWSgrarB5TXA90XHx3uTkj07IpiTjqwA1Atqa2jX7lWjs0ui01EvjbJwNKuvk3BxxrYP9Z5sNLhvWFc9frC7fuhNP7XQ4L756xFGcsXJX+fMbHkay4Bmgj2Az4gUME/l3LMjUFRDLz6urV8sPisF+BWMDCIDnArql6Q8lfUQPEusLf2JMVTpD0vK8j0K5BJLaPjXhZEACH366rcdCOuLUh6N21FwwmtAEc9DxDjeAj+xmbHaOLWq5hweNxTYxPIZNZhtMvp4pBe172i83pASePbw1LasaXwtBWfWll/aQD5n1gyD5CfnhuZaHaoR5Sw3oeisRx24KU5AsclzSHtM0XoAJigwlBbgIgxkLcROkUaiTYUmhrAR7HH32SgJVxAUYkknetWcM23W+xEqL3lTOT9bNa2jkbQAyfLzYQHUBukDuCq9iuepUkyZicG/9KxItBd/jBcHsNyj2ji6T626BnRlXUNSSKoRiNWRrUqp01300B3d4szD5Gf6IPV7pps22fr9oOAySOdVSw9omOLy4NbM2Bw/7F3eNLI0uedOLD0VVap8O3pstLl2d4Hc=
+  bucket: hgogonis.me
+  local-dir: public
+  acl: public_read
+  on:
+    repo: HarryGogonis/portfolio

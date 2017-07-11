@@ -4,6 +4,7 @@ node_js:
 script: yarn build
 deploy:
   skip_cleanup: true
+  acl: public-read
   provider: gcs
   access_key_id: GOOGW6R6IS4CV6K32GHA
   secret_access_key:

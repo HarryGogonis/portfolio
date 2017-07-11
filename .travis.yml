@@ -27,6 +27,7 @@ script:
 - npm install
 - npm run lint
 deploy:
+  skip_cleanup: true
   provider: s3
   access_key_id: AKIAJJOF6XQCERTEBKWA
   secret_access_key:

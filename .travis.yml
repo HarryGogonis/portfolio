@@ -1,31 +1,7 @@
-language: cpp
-sudo: false
-env:
-- export NODE_VERSION="8"
-os:
-- linux
-- osx
-before_install:
-- git submodule update --init --recursive
-- git clone https://github.com/creationix/nvm.git ./.nvm
-- source ./.nvm/nvm.sh
-- nvm install $NODE_VERSION
-- nvm use $NODE_VERSION
-- npm config set python `which python`
-- if [ $TRAVIS_OS_NAME == "linux" ]; then export CC="gcc-4.8"; export CXX="g++-4.8";
-  export LINK="gcc-4.8"; export LINKXX="g++-4.8"; fi
-- gcc --version
-- g++ --version
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-4.8
-    - gcc-4.8
-script:
-- npm install
-- npm run lint
+language: node_js
+node_js:
+- "8"
+script: yarn build
 deploy:
   skip_cleanup: true
   provider: s3

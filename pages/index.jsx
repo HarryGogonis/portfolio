@@ -33,6 +33,25 @@ class SiteIndex extends React.Component {
           </div>
         ));
       }
+      if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'link') {
+        const title = access(page, 'data.title') || page.path;
+        const datePublished = access(page, 'data.date');
+        const category = access(page, 'data.category');
+        const description = access(page, 'data.description');
+        const path = access(page, 'data.path');
+
+        pageLinks.push((
+          <div className="blog-post" key={title}>
+            <time dateTime={moment(datePublished).format('MMMM D, YYYY')}>
+              {moment(datePublished).format('MMMM YYYY')}
+            </time>
+            <span style={{ padding: '5px' }} />
+            <span className="blog-category">{category}</span>
+            <h2><a href={path} target="_blank" rel="noopener noreferrer">{title}</a></h2>
+            <p dangerouslySetInnerHTML={{ __html: description }} />
+          </div>
+        ));
+      }
     });
 
     return (

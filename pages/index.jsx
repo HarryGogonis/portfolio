@@ -38,7 +38,7 @@ class SiteIndex extends React.Component {
         const datePublished = access(page, 'data.date');
         const category = access(page, 'data.category');
         const description = access(page, 'data.description');
-        const path = access(page, 'data.path');
+        const url = access(page, 'data.url');
 
         pageLinks.push((
           <div className="blog-post" key={title}>
@@ -47,7 +47,7 @@ class SiteIndex extends React.Component {
             </time>
             <span style={{ padding: '5px' }} />
             <span className="blog-category">{category}</span>
-            <h2><a href={path} target="_blank" rel="noopener noreferrer">{title}</a></h2>
+            <h2><a href={url} target="_blank" rel="noopener noreferrer">{title}</a></h2>
             <p dangerouslySetInnerHTML={{ __html: description }} />
           </div>
         ));

@@ -16,6 +16,7 @@ a:focus {
 .main-inner {
 	padding: 40px 35px;
 }
+
 @media screen and (max-width:1100px) {
 	.content {
 		lost-column: 2/4;
@@ -39,4 +40,29 @@ a:focus {
 	.main-inner {
 		padding: 25px 20px;
 	}
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form label {
+	display: flex;
+	flex-direction: column;
+}
+
+form > label > textarea, form > label > input {
+	margin: 1em 0 2em 0;
+	font-size: 0.8em;
+	padding: 1em;
+	border: 1px solid #ccc;
+}
+
+form button {
+	background: #1abc9c;
+	border: 0;
+	color: white;
+	padding: 1em;
+	font-size: 0.8em
 }

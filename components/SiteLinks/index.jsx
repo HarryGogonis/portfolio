@@ -22,6 +22,13 @@ class SiteLinks extends React.Component {
               </a>
             </li>
           )}
+          {config.siteLinkedInUrl && (
+            <li>
+              <a href={config.siteLinkedInUrl}>
+                <i className="fa fa-linkedin" />
+              </a>
+            </li>
+          )}
           {config.siteVkUrl && (
             <li>
               <a href={config.siteVkUrl}><i className="fa fa-vk" /></a>

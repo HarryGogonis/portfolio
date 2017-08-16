@@ -5,6 +5,6 @@ siteAuthor = "Harry Gogonis"
 siteTwitterUrl = "https://twitter.com/HarryGogonis"
 siteGithubUrl = "https://github.com/HarryGogonis"
 
-googleAnalyticsId = ""
+googleAnalyticsId = "UA-104743371-1"
 
 linkPrefix = "/gatsby-starter-lumen"

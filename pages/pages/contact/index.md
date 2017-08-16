@@ -31,7 +31,7 @@ path: "/contact"
       type="text"
       name="message"
       placeholder="Message"
-      rows="10"
+      rows="6"
     ></textarea>
   </label>
   <input type="hidden" name="_subject" value="New submission hgogonis.me" />

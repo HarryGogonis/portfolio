@@ -1,11 +1,10 @@
-siteTitle = "Blog by Harry Gogonis"
-siteDescr = "Software Engineer / React/ Redux"
+siteTitle = "Harry Gogonis"
+siteDescr = "Software Engineer / React / Redux"
 siteAuthor = "Harry Gogonis"
 
 siteTwitterUrl = "https://twitter.com/HarryGogonis"
 siteGithubUrl = "https://github.com/HarryGogonis"
 siteLinkedInUrl = "https://www.linkedin.com/in/harrygogonis/"
-
 
 googleAnalyticsId = "UA-104743371-1"
 

@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import ReadNext from '../ReadNext';
 import SocialShare from '../SocialShare';
+import SEO from '../SEO';
 import './style.css';
 import '../../static/css/highlight.css';
 
@@ -18,10 +19,12 @@ class SitePost extends React.Component {
       </div>
     );
 
-    const url = config.siteUrl + route.page.path;
+    const postPath = route.page.path;
+    const url = config.siteUrl + postPath;
 
     return (
       <div>
+        <SEO postPath={postPath} post={post} postSEO />
         {home}
         <div className="blog-single">
           <div className="text">

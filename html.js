@@ -12,7 +12,10 @@ module.exports = React.createClass({
   render() {
     const { body } = this.props;
     const { title } = Helmet.rewind();
-    const font = <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />;
+    const fonts = [
+      <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100italic,300,400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />,
+      <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />,
+    ];
     let css;
     if (process.env.NODE_ENV === 'production') {
       // eslint-disable-next-line import/no-webpack-loader-syntax
@@ -31,7 +34,7 @@ module.exports = React.createClass({
           />
           <meta property="og:site_name" content="Harry Gogonis" />
           { title.toComponent() }
-          { font }
+          { fonts }
           { css }
         </head>
         <body>

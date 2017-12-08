@@ -8,9 +8,9 @@ class SiteLinks extends React.Component {
     return (
       <div className="blog-links">
         <ul>
-          {config.siteTwitterUrl && (
+          {config.siteTwitterHandle && (
             <li>
-              <a href={config.siteTwitterUrl}>
+              <a href={`http://twitter.com/${config.siteTwitterHandle}`}>
                 <i className="fa fa-twitter" />
               </a>
             </li>

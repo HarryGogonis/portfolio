@@ -1,0 +1,13 @@
+.social-share {
+    display: flex;
+}
+.SocialMediaShareButton {
+    flex: 0 0 2rem;
+   font-size: 2rem;
+   line-height: 1; 
+   color: #1abc9c;
+   cursor: pointer;
+   margin-top: 1rem;
+   margin-right: 1rem;
+   text-align: center;
+}

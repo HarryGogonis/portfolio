@@ -8,7 +8,7 @@ body {
 
 /* HTML5 display definitions
 	 ========================================================================== */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, cite, code, small {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, cite, code, small, iframe {
 	display: block;
 }
 body, article, section, footer, header, div, input, nav, article ol, article ul, blockquote, figure {

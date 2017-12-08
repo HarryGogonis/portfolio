@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import ReadNext from '../ReadNext';
+import SocialShare from '../SocialShare';
 import './style.css';
 import '../../static/css/highlight.css';
 
@@ -17,6 +18,8 @@ class SitePost extends React.Component {
       </div>
     );
 
+    const url = config.siteUrl + route.page.path;
+
     return (
       <div>
         {home}
@@ -27,13 +30,14 @@ class SitePost extends React.Component {
             <div className="date-published">
               <em>Published {moment(post.date).format('D MMM YYYY')}</em>
             </div>
+            <SocialShare title={post.title} url={url} />
           </div>
           <div className="footer">
             <ReadNext post={post} {...this.props} />
             <hr />
             <p>
               {config.siteDescr}
-              <a href={config.siteTwitterUrl}>
+              <a href={`https://twitter.com/${config.siteTwitterHandle}`}>
                 <br /> <strong>{config.siteAuthor}</strong> on Twitter
               </a>
             </p>

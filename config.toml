@@ -1,8 +1,9 @@
 siteTitle = "Harry Gogonis"
 siteDescr = "Software Engineer / React / Redux"
 siteAuthor = "Harry Gogonis"
+siteUrl = "http://hgogonis.me"
 
-siteTwitterUrl = "https://twitter.com/HarryGogonis"
+siteTwitterHandle = "HarryGogonis"
 siteGithubUrl = "https://github.com/HarryGogonis"
 siteLinkedInUrl = "https://www.linkedin.com/in/harrygogonis/"
 

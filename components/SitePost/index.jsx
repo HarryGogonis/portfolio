@@ -26,6 +26,11 @@ class SitePost extends React.Component {
         <div className="blog-single">
           <div className="text">
             <h1>{post.title}</h1>
+            { post.cover && (
+              <div className="cover">
+                <img src={post.cover} />
+              </div>
+            )}
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
             <div className="date-published">
               <em>Published {moment(post.date).format('D MMM YYYY')}</em>

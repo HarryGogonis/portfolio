@@ -5,6 +5,7 @@ layout: post
 path: "/symmetric-encryption-php/"
 category: "how-to"
 description: "How to encrypt/decrypt data in PHP"
+cover: "cover.jpeg"
 ---
 ## Introduction
 PHP has multiple implementations of symmetric encryption implemented. If you are using [mcrypt](https://secure.php.net/manual/en/function.mcrypt-cbc.php) this library is deprecated in PHP 5.5.0 and removed in PHP 7.0.0.

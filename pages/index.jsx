@@ -7,6 +7,7 @@ import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 import { config } from 'config';
 import SiteSidebar from '../components/SiteSidebar';
+import SEO from '../components/SEO';
 
 class SiteIndex extends React.Component {
   render() {
@@ -57,6 +58,7 @@ class SiteIndex extends React.Component {
     return (
       <div>
         <Helmet title={config.siteTitle} />
+        <SEO />
         <SiteSidebar {...this.props} />
         <div className="content">
           <div className="main">

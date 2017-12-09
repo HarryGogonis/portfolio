@@ -11,7 +11,8 @@ module.exports = React.createClass({
   },
   render() {
     const { body } = this.props;
-    const { title } = Helmet.rewind();
+    const helmet = Helmet.rewind()
+
     const fonts = [
       <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100italic,300,400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />,
       <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />,
@@ -33,7 +34,8 @@ module.exports = React.createClass({
             content="React/Redux Software Engineer for hire. Gainesville, Florida"
           />
           <meta property="og:site_name" content="Harry Gogonis" />
-          { title.toComponent() }
+          { helmet.title.toComponent() }
+          { helmet.meta.toComponent() }
           { fonts }
           { css }
         </head>

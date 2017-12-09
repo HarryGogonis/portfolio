@@ -9,9 +9,13 @@ import profilePic from '../../pages/photo.jpg';
 const { siteUrl, siteTitleAlt } = config
 
 class SEO extends Component {
-  propTypes = {
-    siteUrl: PropTypes.string.isRequired,
-    postPath: PropTypes.string.isRequired,
+  static propTypes = {
+    post: PropTypes.shape({
+      cover: PropTypes.string,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string,
+    }),
+    postPath: PropTypes.string,
     postSEO: PropTypes.bool,
   }
 
@@ -43,7 +47,7 @@ class SEO extends Component {
     return config.siteLogo
   }
 
-  getpostUrl() {
+  getPostUrl() {
     const { post, postPath, postSEO } = this.props
 
     if (postSEO) {
@@ -57,7 +61,7 @@ class SEO extends Component {
     const title = this.getTitle()
     const description = this.getDescription()
     const image = this.getImage();
-    const postUrl = this.getpostUrl();
+    const postUrl = this.getPostUrl();
 
     const schemaOrgJSONLD = [
       {
@@ -68,6 +72,7 @@ class SEO extends Component {
         alternateName: siteTitleAlt ? siteTitleAlt : '',
       },
     ];
+
     if (postSEO) {
       schemaOrgJSONLD.push([
         {
@@ -100,6 +105,7 @@ class SEO extends Component {
         },
       ]);
     }
+
     return (
       <Helmet>
         {/* General tags */}

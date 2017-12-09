@@ -4,6 +4,7 @@
   "description": "Simple starter for Gatsby",
   "main": "n/a",
   "scripts": {
+    "start": "gatsby develop",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "clean:public": "rm -rf public",
@@ -40,7 +41,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-ga": "^2.1.2",
-    "react-helmet": "^4.0.0",
+    "react-helmet": "^5.2.0",
     "react-router": "^2.6.1",
     "react-share": "^1.18.0",
     "safe-access": "^0.1.0",

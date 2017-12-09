@@ -66,6 +66,33 @@
 	max-width: 100%;
 	height: auto;
 }
+.blog-single .text .featured-music {
+	max-width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2.5rem;
+}
+.blog-single .featured-music .cover {
+	margin-left: 0;
+	margin-right: 2rem;
+	flex: 0 0 250px;
+}
+.blog-single .featured-music .meta {
+	flex: 1 0 500px;
+	list-style: none;
+}
+.blog-single .featured-music .artist {
+	font-size: 4rem;
+	margin-top: 2.5rem;
+	font-weight: 500;
+	line-height: 1;
+}
+.blog-single .featured-music .album {
+	font-size: 3rem;
+	margin-top: 0;
+	font-weight: 100;
+	font-style: italic;
+}
 .blog-single .footer {
 	max-width: 630px;
 	margin-left: auto;

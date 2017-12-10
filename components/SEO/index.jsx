@@ -1,65 +1,56 @@
 // https://raw.githubusercontent.com/Vagr9K/gatsby-advanced-starter/master/src/components/SEO/SEO.jsx
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
 
-import { config } from 'config'
-import profilePic from '../../pages/photo.jpg';
+import { config } from 'config';
+import logo from '../../static/logo.png';
 
-const { siteUrl, siteTitleAlt } = config
+const { siteUrl, siteTitleAlt } = config;
 
 class SEO extends Component {
-  static propTypes = {
-    post: PropTypes.shape({
-      cover: PropTypes.string,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string,
-    }),
-    postPath: PropTypes.string,
-    postSEO: PropTypes.bool,
-  }
-
   getTitle() {
-    const { post, postSEO } = this.props
+    const { post, postSEO } = this.props;
 
     if (postSEO) {
-      return post.title
+      return post.title;
     }
-    return config.siteTitle
+    return config.siteTitle;
   }
 
   getDescription() {
-    const { post, postSEO } = this.props
-  
+    const { post, postSEO } = this.props;
+
     if (postSEO) {
-      return post.description
+      return post.description;
     }
-    return config.siteDescr
+    return config.siteDescr;
   }
 
   getImage() {
-    const { post, postSEO, postPath } = this.props
-    const postUrl = siteUrl + postPath
+    const { post, postSEO, postPath } = this.props;
+    const postUrl = siteUrl + postPath;
 
     if (postSEO) {
-      return post.cover && (postUrl + post.cover)
+      return post.cover && (postUrl + post.cover);
     }
-    return config.siteLogo
+
+    return logo;
   }
 
   getPostUrl() {
-    const { post, postPath, postSEO } = this.props
+    const { postPath, postSEO } = this.props;
 
     if (postSEO) {
-      return siteUrl + postPath
+      return siteUrl + postPath;
     }
-    return null
+    return null;
   }
 
   render() {
-    const { post, postPath, postSEO } = this.props
-    const title = this.getTitle()
-    const description = this.getDescription()
+    const { postSEO } = this.props;
+    const title = this.getTitle();
+    const description = this.getDescription();
     const image = this.getImage();
     const postUrl = this.getPostUrl();
 
@@ -69,7 +60,7 @@ class SEO extends Component {
         '@type': 'WebSite',
         url: siteUrl,
         name: title,
-        alternateName: siteTitleAlt ? siteTitleAlt : '',
+        alternateName: siteTitleAlt || '',
       },
     ];
 
@@ -141,5 +132,15 @@ class SEO extends Component {
     );
   }
 }
+
+SEO.propTypes = {
+  post: PropTypes.shape({
+    cover: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+  }),
+  postPath: PropTypes.string,
+  postSEO: PropTypes.bool,
+};
 
 export default SEO;

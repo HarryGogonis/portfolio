@@ -2,12 +2,12 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
 
-import faviconApple from './static/favicons/apple-touch-icon.png'
-import favicon32 from './static/favicons/favicon-32x32.png'
-import favicon16 from './static/favicons/favicon-16x16.png'
-import manifest from './static/favicons/manifest.json'
-import safariPinned from './static/favicons/safari-pinned-tab.svg'
-import faviconICO from './static/favicons/favicon.ico'
+import faviconApple from './static/favicons/apple-touch-icon.png';
+import favicon32 from './static/favicons/favicon-32x32.png';
+import favicon16 from './static/favicons/favicon-16x16.png';
+import manifest from './static/favicons/manifest.json';
+import safariPinned from './static/favicons/safari-pinned-tab.svg';
+import faviconICO from './static/favicons/favicon.ico';
 
 const BUILD_TIME = new Date().getTime();
 
@@ -18,7 +18,7 @@ module.exports = React.createClass({
   },
   render() {
     const { body } = this.props;
-    const helmet = Helmet.rewind()
+    const helmet = Helmet.rewind();
 
     const fonts = [
       <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100italic,300,400,400italic,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css" />,

@@ -31,7 +31,7 @@ class SitePost extends React.Component {
             <h1>{post.title}</h1>
             { post.cover && (
               <div className="cover">
-                <img src={post.cover} />
+                <img src={post.cover} role="presentation" />
               </div>
             )}
             <div dangerouslySetInnerHTML={{ __html: post.body }} />

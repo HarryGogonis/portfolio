@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
@@ -57,8 +58,7 @@ class SiteSidebar extends React.Component {
 }
 
 SiteSidebar.propTypes = {
-  location: React.PropTypes.object,
+  location: PropTypes.object,
 };
 
 export default SiteSidebar;
-

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SiteSidebar from '../SiteSidebar';
 import './style.css';
@@ -28,7 +29,7 @@ class SitePage extends React.Component {
 }
 
 SitePage.propTypes = {
-  route: React.PropTypes.object.isRequired,
+  route: PropTypes.object.isRequired,
 };
 
 export default SitePage;

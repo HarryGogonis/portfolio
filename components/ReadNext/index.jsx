@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router';
 import { include as includes } from 'underscore.string';
@@ -39,10 +40,9 @@ class ReadNext extends React.Component {
 }
 
 ReadNext.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
-  route: React.PropTypes.object,
+  post: PropTypes.object.isRequired,
+  pages: PropTypes.array,
+  route: PropTypes.object,
 };
 
 export default ReadNext;
-

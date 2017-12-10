@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {
   ShareButtons,
@@ -28,8 +29,8 @@ const SocialShare = ({ title, url }) => (
 );
 
 SocialShare.propTypes = {
-  title: React.PropTypes.string.isRequired,
-  url: React.PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default SocialShare;

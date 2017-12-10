@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router';
@@ -57,7 +58,7 @@ class SitePost extends React.Component {
 }
 
 SitePost.propTypes = {
-  route: React.PropTypes.object.isRequired,
+  route: PropTypes.object.isRequired,
 };
 
 export default SitePost;

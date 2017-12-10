@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { config } from 'config';
 
@@ -28,7 +29,7 @@ class MarkdownWrapper extends React.Component {
 }
 
 MarkdownWrapper.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 };
 
 export default MarkdownWrapper;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import sortBy from 'lodash/sortBy';
 import moment from 'moment';
@@ -73,7 +74,7 @@ class SiteIndex extends React.Component {
 }
 
 SiteIndex.propTypes = {
-  route: React.PropTypes.object,
+  route: PropTypes.object,
 };
 
 export default SiteIndex;

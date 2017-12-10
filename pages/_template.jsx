@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import '../static/css/reset.css';
 import '../static/css/typography.css';
@@ -17,7 +18,7 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.any,
+  children: PropTypes.any,
 };
 
 export default Template;

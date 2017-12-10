@@ -2,7 +2,7 @@ const rucksack = require('rucksack-css');
 const lost = require('lost');
 const cssnext = require('postcss-cssnext');
 
-exports.modifyWebpackConfig = function (config) {
+exports.modifyWebpackConfig = ({config}) => {
   config.merge({
     postcss: [
       lost(),

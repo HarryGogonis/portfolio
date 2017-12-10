@@ -10,3 +10,5 @@ siteLinkedInUrl = "https://www.linkedin.com/in/harrygogonis/"
 googleAnalyticsId = "UA-104743371-1"
 
 linkPrefix = "/gatsby-starter-lumen"
+
+plugins = ["gatsby-plugin-react-next"]

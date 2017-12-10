@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import { config } from 'config';
-import logo from '../../static/logo.png';
 
 const { siteUrl, siteTitleAlt } = config;
 
@@ -35,7 +34,7 @@ class SEO extends Component {
       return post.cover && (postUrl + post.cover);
     }
 
-    return logo;
+    return `${siteUrl}/logo.png`;
   }
 
   getPostUrl() {

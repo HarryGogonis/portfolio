@@ -9,3 +9,5 @@ public
 pages/.manifest
 .idea
 gatsby-starter-lumen.iml
+
+.DS_Store

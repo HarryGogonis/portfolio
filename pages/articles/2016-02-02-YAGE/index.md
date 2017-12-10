@@ -5,15 +5,13 @@ layout: post
 path: "/yet-another-game-engine/"
 category: "SOFTWARE"
 description: "A 3D game engine written in C++ and using OpenGL."
+cover: "yage.png"
 ---
 A 3D game engine written in C++ and OpenGL. Currently only supports Windows.
 
-![YAGE](yage.png)
+## [<i class="fa fa-github" aria-hidden="true"></i> View on Github](https://github.com/HarryGogonis/YAGE)
 
-# [<i class="fa fa-github" aria-hidden="true"></i> View on Github](https://github.com/HarryGogonis/YAGE)
-
-
-# Features
+## Features
 
 * MIT License, do whatever you want with the code!
 * OpenGL-based 3D rendering pipeline
@@ -28,11 +26,11 @@ A 3D game engine written in C++ and OpenGL. Currently only supports Windows.
 * Skybox
 * Much more!
 
-# Planned Features
+## Planned Features
 * Animation
 * 2D Text Rendering
 
-# Demo Game
+## Demo Game
 This is a quick demo game I created to provide developers
 with a understanding of what they can build with the game engine.
 
@@ -42,13 +40,13 @@ with a understanding of what they can build with the game engine.
   frameborder="0" allowfullscreen
 ></iframe>
 
-# Screenshots
+## Screenshots
 
-## Dynamic Shadows
+### Dynamic Shadows
 ![Dynamic Shadows](shadows.png)
 
-## Example Diablo Render
+### Example Diablo Render
 ![Example Diablo Render](diablo.png)
 
-## Particle System
+### Particle System
 ![Particle System](particles.png)

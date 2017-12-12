@@ -7,7 +7,7 @@ import ReadNext from '../ReadNext';
 import SocialShare from '../SocialShare';
 import SEO from '../SEO';
 import './style.css';
-import '../../static/css/highlight.css';
+import '../../static/css/ateliersulphurpool.light.css';
 
 class SitePost extends React.Component {
   render() {

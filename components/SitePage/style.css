@@ -7,7 +7,7 @@
 }
 .blog-page p {
 	font-size: 16px;
-	line-height: 26px;
+	line-height: 1.6;
 	margin-bottom: 26px;
 }
 @media (max-width:900px) {

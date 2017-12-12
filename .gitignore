@@ -11,3 +11,4 @@ pages/.manifest
 gatsby-starter-lumen.iml
 
 .DS_Store
+.cache

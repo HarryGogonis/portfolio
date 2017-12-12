@@ -1,6 +1,6 @@
 ---
 title: "Symmetric Encryption in PHP"
-date: "Mon Aug 21 11:48:12 EDT 2017"
+date: "2017-08-21T11:48:12Z"
 layout: post
 path: "/symmetric-encryption-php/"
 category: "how-to"

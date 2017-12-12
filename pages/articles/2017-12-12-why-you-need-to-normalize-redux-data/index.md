@@ -2,7 +2,7 @@
 title: "Why You Need to Normalize Redux Data"
 date: "2017-12-12T02:08:56Z"
 layout: post
-path: "why-it-is-important-to-normalize-data-with-redux"
+path: "why-you-need-to-normalize-redux-data"
 category: "HOW-TO"
 description: "In this article, I’ll explore how to normalize data and the benefits it brings to React/Redux."
 cover: "mistake.jpg"
@@ -32,7 +32,7 @@ const posts = [
 To make things concrete, let’s assume we create a component to render articles:
 
 ```jsx
-// Post
+// Post.jsx
 const Post = ({ post }) => (
 	<div>
 		{post.likes.map(user => (
@@ -53,7 +53,7 @@ const User = ({ user }) => (
 )
 ```
 
-## What if we want to change information for one of the users?
+## What if we want to change the information of a user?
 If you simply mutate one of the posts, the component will not update with the user’s new information. You have to *deep clone* all the posts data or use immutable data structures. Even with ImmutableJS,  changing deep structures can get messy: 
 
 ```js

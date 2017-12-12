@@ -1,5 +1,8 @@
 .blog-post {
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 2px;
 	margin-bottom: 30px;
+	width: 100%;
 }
 .blog-post:last-child {
 	margin-bottom: 10px;
@@ -26,6 +29,21 @@
 	color: #222;
 	font-weight: 500;
 	text-transform: uppercase;
+}
+.blog-post .post-meta {
+	padding: 1rem;
+}
+.blog-post .post-cover {
+	max-height: 200px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.blog-post .post-cover a,
+.blog-post .post-cover img {
+	width: 100%;
+	height: auto;
 }
 .blog-post .blog-category {
 	font-size: 14px;

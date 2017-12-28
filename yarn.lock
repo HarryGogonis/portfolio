@@ -6032,9 +6032,9 @@ react-router@^2.6.1:
     loose-envify "^1.2.0"
     warning "^3.0.0"
 
-react-share@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/react-share/-/react-share-1.18.0.tgz#1b60611251b936b73eab366c7bc739634fb301a9"
+react-share@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/react-share/-/react-share-1.18.1.tgz#2e99acd3d6e6c85d97886ac29e22ec2539babb97"
   dependencies:
     babel-runtime "^6.6.1"
     classnames "^2.2.5"

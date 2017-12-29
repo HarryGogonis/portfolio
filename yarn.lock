@@ -1646,7 +1646,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.2, create-react-class@^15.6.0:
+create-react-class@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.0.tgz#ab448497c26566e1e29413e883207d57cfe7bed4"
   dependencies:
@@ -5979,13 +5979,12 @@ react-dom@^15.4.1, react-dom@^15.6.1:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-ga@^2.1.2:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.2.0.tgz#45235de1356e4d988d9b82214d615a08489c9291"
-  dependencies:
-    create-react-class "^15.5.2"
-    object-assign "^4.0.1"
-    prop-types "^15.5.6"
+react-ga@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.3.6.tgz#7b8cb82851c2c170ddd620039c4f71f16d97eddc"
+  optionalDependencies:
+    prop-types "^15.5.10"
+    react ">= 0.14.0"
 
 react-helmet@^5.2.0:
   version "5.2.0"
@@ -6059,6 +6058,15 @@ react-transform-hmr@^1.0.3, react-transform-hmr@^1.0.4:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+"react@>= 0.14.0":
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react@^15.4.1, react@^15.6.1:
   version "15.6.1"

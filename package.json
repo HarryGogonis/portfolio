@@ -51,7 +51,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.5",
+    "babel-loader": "^7.1.4",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.28.7",
     "eslint": "^3.x",

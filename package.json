@@ -13,7 +13,9 @@
     "copy": "npm run copy:files",
     "lint": "./node_modules/.bin/eslint --cache --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+    "deploy": "gatsby build --prefix-links && gh-pages -d public",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -46,7 +48,8 @@
     "react-share": "^1.18.0",
     "safe-access": "^0.1.0",
     "underscore.string": "^3.2.3",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
@@ -71,5 +74,6 @@
     "rucksack-css": "^0.9.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
-  }
+  },
+  "snyk": true
 }

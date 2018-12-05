@@ -1,0 +1,17 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - gatsby > postcss-import > pkg-resolve > jspm > request > hawk > hoek:
+        patched: '2018-12-05T04:41:33.820Z'
+    - gatsby > postcss-import > pkg-resolve > jspm > request > hawk > sntp > hoek:
+        patched: '2018-12-05T04:41:33.820Z'
+    - gatsby > postcss-import > pkg-resolve > jspm > request > hawk > boom > hoek:
+        patched: '2018-12-05T04:41:33.820Z'
+    - gatsby > postcss-import > pkg-resolve > jspm > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-05T04:41:33.820Z'
+  'npm:tunnel-agent:20170305':
+    - gatsby > image-webpack-loader > imagemin-pngquant > pngquant-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-12-05T04:41:33.820Z'

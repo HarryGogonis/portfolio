@@ -45,7 +45,7 @@
     "react-router": "^2.6.1",
     "react-share": "^1.18.0",
     "safe-access": "^0.1.0",
-    "underscore.string": "^3.2.3",
+    "underscore.string": "^3.3.6",
     "url-loader": "^0.5.7"
   },
   "devDependencies": {
